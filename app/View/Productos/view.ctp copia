@@ -1,0 +1,117 @@
+    <div id="wrapper">
+
+        <section id="content">
+        	<div id="breadcrumb-container">
+        		<div class="container">
+					<ul class="breadcrumb">
+						<li><a href="/">Inicio</a></li>
+						<li class="active"><a href="/categorias/view/<?php echo h($producto['Categoria']['id']); ?>"><?php echo h($producto['Categoria']['nombre']); ?></a></li>
+					</ul>
+        		</div>
+        	</div>
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-md-12">
+        				<div class="row">
+        				<div class="col-md-6 col-sm-12 col-xs-12 product-viewer clearfix">
+        					<div id="product-image-carousel-container">
+        						<ul id="product-carousel" class="celastislide-list">
+	        						<li class="active-slide"><a data-rel='prettyPhoto[product]' href="/img/productos/<?php echo h($producto['Producto']['foto1']); ?>" data-image="images/products/big-item1.jpg" data-zoom-image="images/products/big-item1.jpg" class="product-gallery-item"><img src="/img/productos/<?php echo h($producto['Producto']['foto1']); ?>" alt="Phone photo 1"></a></li>
+	        						<li><a data-rel='prettyPhoto[product]' href="/img/productos/<?php echo h($producto['Producto']['foto2']); ?>" data-image="images/products/big-item2.jpg" data-zoom-image="images/products/big-item2.jpg" class="product-gallery-item"><img src="/img/productos/<?php echo h($producto['Producto']['foto2']); ?>" alt="Phone photo 2"></a></li>
+								<li><a data-rel='prettyPhoto[product]' href="/img/productos/<?php echo h($producto['Producto']['foto3']); ?>" data-image="images/products/big-item2.jpg" data-zoom-image="images/products/big-item3.jpg" class="product-gallery-item"><img src="/img/productos/<?php echo h($producto['Producto']['foto3']); ?>" alt="Phone photo 3"></a></li>
+        					</ul><!-- End product-carousel -->
+        					</div>
+
+        					<div id="product-image-container">
+        						<figure><img src="/img/productos/<?php echo h($producto['Producto']['foto1']); ?>" data-zoom-image="/img/productos/<?php echo h($producto['Producto']['foto1']); ?>" alt="Product Big image" id="product-image">
+        							<!--<figcaption class="item-price-container">
+										<!--<span class="old-price">$160</span>-->
+										<!--<span class="item-price">$<?php echo h($producto['Producto']['precio']); ?></span>
+								</figcaption>-->
+        						</figure>
+        					</div><!-- product-image-container -->        				 
+        				</div><!-- End .col-md-6 -->
+
+        				<div class="col-md-6 col-sm-12 col-xs-12 product">
+                        <div class="lg-margin visible-sm visible-xs"></div><!-- Space -->
+        					<h1 class="product-name"><?php echo h($producto['Producto']['nombre']); ?></h1>
+        					
+        				<ul class="product-list">
+        					<li><span>Clave:</span><?php echo h($producto['Producto']['sku']); ?></li>
+        					<li><span>Marca:</span><?php echo h($producto['Marca']['nombre']); ?></li>
+        					<li><span>Material:</span><?php echo h($producto['Material']['nombre']); ?></li>
+						<li><span>Medidas:</span><?php echo h($producto['Producto']['medida']); ?></li>
+						<li><span>Descripcion:</span><?php echo h($producto['Producto']['descripcion']); ?></li>
+        				</ul>
+        				<hr>
+                        <div class="product-color-filter-container">
+                           <!-- <span>Colores:</span>
+                            <div class="xs-margin"></div>-->
+                            <!--<ul class="filter-color-list clearfix">
+                                <li><a href="#" data-bgcolor="#fff" class="filter-color-box"></a></li>
+                                <li><a href="#" data-bgcolor="#d1d2d4" class="filter-color-box"></a></li>
+                                <li><a href="#" data-bgcolor="#666467" class="filter-color-box"></a></li>
+                                <li><a href="#" data-bgcolor="#515151" class="filter-color-box"></a></li>
+                                <li><a href="#" data-bgcolor="#bcdae6" class="filter-color-box"></a></li>
+                                <li><a href="#" data-bgcolor="#5272b3" class="filter-color-box"></a></li>
+                                <li><a href="#" data-bgcolor="#acbf0b" class="filter-color-box"></a></li>
+                            </ul>-->
+                        </div><!-- End .product-color-filter-container-->
+                        <hr>
+					
+					<!--<div class="md-margin"></div>--><!-- Space -->
+					
+        				</div><!-- End .col-md-6 -->
+        					
+        					
+        				</div><!-- End .row -->
+        				
+        				<!--<div class="lg-margin2x"></div>--><!-- End .space -->
+        				
+        				
+        			<div class="lg-margin2x"></div><!-- Space -->
+        			<div class="purchased-items-container carousel-wrapper">
+					<header class="content-title">
+					    <div class="title-bg">
+						<h2 class="title">Relacionados</h2>
+					    </div><!-- End .title-bg -->
+					   <!-- <p class="title-desc">Note the simil</p>-->
+					</header>
+                            
+					<div class="carousel-controls">
+					    <div id="purchased-items-slider-prev" class="carousel-btn carousel-btn-prev"></div><!-- End .carousel-prev -->
+					    <div id="purchased-items-slider-next" class="carousel-btn carousel-btn-next carousel-space"></div><!-- End .carousel-next -->
+					</div><!-- End .carousel-controllers -->
+					<div class="purchased-items-slider owl-carousel">
+					    <?php foreach($relacionados as $rel){?>
+						<div class="item item-hover">
+						    <div class="item-image-wrapper">
+							<figure><!--class="item-image-container"--> 
+							    <a href="/productos/view/<?php echo h($rel['Producto']['id']); ?>">
+								<img src="/img/productos/<?php echo $rel['Producto']['foto1'] ?>" alt="item1" class="item-image">
+								<!--<img src="/img/productos/<?php echo $rel['Producto']['foto1'] ?>" alt="item1  Hover" class="item-image-hover">-->
+							    </a>
+							</figure>
+							<!--<div class="item-price-container">
+							    <span class="item-price"><?php echo h($rel['Producto']['precio']); ?><span class="sub-price"></span></span>
+							</div>--><!-- End .item-price-container -->
+							
+						    </div><!-- End .item-image-wrapper -->
+						    <div class="item-meta-container">
+							<h3 class="item-name"><a href="/productos/view/<?php echo h($rel['Producto']['id']); ?>"><?php echo h($rel['Producto']['nombre']); ?></a></h3>
+						    </div><!-- End .item-meta-container --> 
+						</div><!-- End .item -->
+						<?php }?>
+                                </div><!--purchased-items-slider -->
+				</div><!-- End .purchased-items-container -->
+
+        			</div><!-- End .col-md-12 -->
+        		</div><!-- End .row -->
+			</div><!-- End .container -->
+        
+        </section><!-- End #content -->
+        
+       
+    </div><!-- End #wrapper -->
+        <a href="#" id="scroll-top" title="Scroll to Top"><i class="fa fa-angle-up"></i></a><!-- End #scroll-top -->
+

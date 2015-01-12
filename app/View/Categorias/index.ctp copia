@@ -1,0 +1,94 @@
+        <section id="content">
+        	<!-- End #category-header -->
+        	<div id="category-breadcrumb">
+        		<div class="container">
+				<ul class="breadcrumb">
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/categorias">CATEGORIAS</a></li>
+				</ul>
+        		</div>
+        	</div>
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-md-12">
+        				
+        				<div class="row">
+        					
+        					<div class="col-md-9 col-sm-8 col-xs-12 main-content">
+        						
+        						
+        						<div class="md-margin"></div><!-- .space -->
+        						<div class="category-item-container">
+        						<div class="row">
+								<?php foreach($categorias as $k => $cat){?>
+        							<div class="col-md-3 col-sm-6 col-xs-12">
+									<div class="item item-hover">
+									    <div class="item-image-wrapper">
+										<figure class="">
+										    <a href="/categorias/view/<?php echo  $cat['Categoria']['id'];?>">
+											<?php if(!empty($cat['Categoria']['foto'])){ ?>
+												<img src="/img/categorias/<?php echo $cat['Categoria']['foto'];?>" alt="item1" class="item-image" >
+												<!--<img src="/img/categorias/<?php echo $cat['Categoria']['foto'];?>" alt="item1  Hover" class="item-image-hover">-->
+											<?php }
+											else{ ?>
+												<img src="/img/productos/<?php echo $cat['Producto'][0]['foto1'];?>" alt="item1" class="item-image" >
+												<!--<img src="/img/productos/<?php echo $cat['Producto'][0]['foto1'];?>" alt="item1  Hover" class="item-image-hover">-->
+											<?php }?>
+										    </a>
+										</figure>
+									    </div><!-- End .item-image-wrapper -->
+									    <div class="item-meta-container">
+										
+										<h3 class="item-name"><a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>"><?php echo $cat['Categoria']['nombre']; ?></a></h3>
+										
+									    </div><!-- End .item-meta-container --> 
+									</div><!-- End .item -->
+								</div><!-- End .col-md-4 -->
+								
+								<?php
+									if(($k+1)%4==0){
+										?>
+										</div>
+										<div class="row">
+										<?php
+									}
+								}?>
+        						</div><!-- End .row -->
+							</div><!-- End .category-item-container -->
+							
+        						
+        					</div><!-- End .col-md-9 -->
+						<aside class="col-md-3 col-sm-4 col-xs-12 sidebar">
+        						<div class="widget">
+        							<div class="panel-group custom-accordion sm-accordion" id="category-filter">
+										<div class="panel">
+											<div class="accordion-header">
+												<div class="accordion-title"><span>Categorias</span></div><!-- End .accordion-title -->
+												<a class="accordion-btn opened"  data-toggle="collapse" data-target="#category-list-1"></a>
+											</div><!-- End .accordion-header -->
+											
+											<div id="category-list-1" class="collapse in">
+												<div class="panel-body">
+													<ul class="category-filter-list jscrollpane">
+														<?php foreach($categorias as $cat){?>
+															<li><a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>"><?php echo $cat['Categoria']['nombre']; ?></a></li>
+														<?php }?>
+													</ul>
+												</div><!-- End .panel-body -->
+											</div><!-- #collapse -->
+										</div><!-- End .panel -->
+
+        							</div><!-- .panel-group -->
+        						</div><!-- End .widget -->
+        						
+        					
+        						
+        					</aside><!-- End .col-md-3 -->
+        				</div><!-- End .row -->
+        				
+        				
+        			</div><!-- End .col-md-12 -->
+        		</div><!-- End .row -->
+			</div><!-- End .container -->
+        
+        </section><!-- End #content -->

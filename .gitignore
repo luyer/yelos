@@ -1,3 +1,17 @@
+# User specific & automatically generated files #
+#################################################
+/app/Config/database.php
+/app/tmp
+/lib/Cake/Console/Templates/skel/tmp/
+/lib
+/plugins
+/vendors
+/build
+/dist
+/tags
+*.mo
+
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

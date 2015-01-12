@@ -1,0 +1,70 @@
+        <section id="content">
+        	<!-- End #category-header -->
+        	<div id="category-breadcrumb">
+        		<div class="container">
+					<ul class="breadcrumb">
+						<li><a href="/">Inicio</a></li>
+						<li><a href="#">Búsqueda</a></li>
+					</ul>
+        		</div>
+        	</div>
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-md-12">
+        				
+        				<div class="row">
+        					
+        					<div class="col-md-12 col-sm-8 col-xs-12 main-content">
+        						
+        						
+							
+        						<div class="md-margin"></div><!-- .space -->
+        						<div class="category-item-container">
+        						<div class="row">
+								<?php foreach($productos as $k => $producto){?>
+        							<div class="col-md-3 col-sm-6 col-xs-12">
+									<div class="item item-hover">
+									    <div class="item-image-wrapper">
+										<figure class="item-image-container">
+										    <a href="/productos/view/<?php echo $producto['Producto']['id'];?>">
+											<img src="/img/productos/<?php echo $producto['Producto']['foto1'];?>" alt="item1" class="item-image">
+											<img src="/img/productos/<?php echo $producto['Producto']['foto1'];?>" alt="item1  Hover" class="item-image-hover">
+										    </a>
+										</figure>
+										<!--<div class="item-price-container">
+										    
+										    <span class="item-price"><?php echo $producto['Producto']['precio']; ?><span class="sub-price"></span></span>
+										</div>--><!-- End .item-price-container -->
+									    </div><!-- End .item-image-wrapper -->
+									    <div class="item-meta-container">
+										
+										<h3 class="item-name"><a href="product.html"><?php echo $producto['Producto']['nombre']; ?></a></h3>
+										
+									    </div><!-- End .item-meta-container --> 
+									</div><!-- End .item -->
+								</div><!-- End .col-md-4 -->
+								<?php
+									if(($k+1)%4==0){
+										?>
+										</div>
+										<div class="row">
+										<?php
+									}
+								}?>
+        						</div><!-- End .row -->
+							</div><!-- End .category-item-container -->
+        						
+        						
+							
+        						
+        					</div><!-- End .col-md-9 -->
+        					
+        					
+        				</div><!-- End .row -->
+        				
+        				
+        			</div><!-- End .col-md-12 -->
+        		</div><!-- End .row -->
+			</div><!-- End .container -->
+        
+        </section><!-- End #content -->
