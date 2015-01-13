@@ -55,7 +55,7 @@ class CategoriasController extends AppController {
 								'order'=>'Producto.nombre',
 								'recursive'=>-1,
 								'limit'=>25));
-		#debug($productos);
+		#debug($productos);die;
 		$this->set('productos',$productos);
 		
 		#busco las categorias padre

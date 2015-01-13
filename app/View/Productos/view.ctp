@@ -80,7 +80,7 @@
 		<?php foreach($relacionados as $rel){?>
 		<!-- Product #1 -->
 		<div class="four columns">
-			<figure class="product">
+			<figure class="product effect2">
 				<div class="mediaholder">
 					<a href="/productos/view/<?php echo $rel['Producto']['id'] ?>">
 						<img alt="" src="/img/productos/<?php echo $rel['Producto']['foto1'] ?>"/>
@@ -88,13 +88,24 @@
 							<img alt="" src="/img/productos/<?php echo $rel['Producto']['foto1'] ?>"/>
 						</div>
 					</a>
-					<a href="/productos/view/<?php echo $rel['Producto']['id'] ?>" class="product-button">Ver Producto</a>
+					<a href="/productos/view/<?php echo $rel['Producto']['id'] ?>" class="product-button"><i class="fa fa-paper-plane"></i> Ver Producto</a>
 				</div>
 
 				<a href="/productos/view/<?php echo $rel['Producto']['id'] ?>">
 					<section>
-						<!--<span class="product-category">Skirts</span>-->
-						<h5><?php echo $rel['Producto']['nombre'] ?></h5>
+						<span class="product-category"><?php echo $rel['Producto']['sku']; ?></span>
+            <h5>
+							<?php 
+							echo $this->Text->truncate(
+										ucfirst(strtolower($rel['Producto']['nombre'])),
+										35,
+										array(
+												'ellipsis' => '...',
+												'exact' => false
+										)
+								);
+							?>
+            </h5>	
 					</section>
 				</a>
 			</figure>

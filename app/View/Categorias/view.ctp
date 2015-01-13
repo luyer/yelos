@@ -2,7 +2,7 @@
 ================================================== -->
 <section class="parallax-titlebar fullwidth-element"  data-background="#000" data-opacity="0.45" data-height="160">
 
-	<img src="/images/titlebar_bg_01.jpg" alt="" />
+	<img src="/img/slider2.jpg" alt="" />
 	<div class="parallax-overlay"></div>
 
 
@@ -30,7 +30,11 @@
 
 			<ul id="categories">
 				<?php foreach($categorias as $k => $cat){?>
-				<li><a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>"><?php echo $cat['Categoria']['nombre']; ?> <span>(12)</span></a>
+				<li>
+        	<a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>"> 
+          	<i class="fa fa-caret-right"></i> <?php echo ucfirst(strtolower($cat['Categoria']['nombre'])); ?> 
+            <span>(12)</span>
+          </a>
 				</li>
 				<?php }?>
 			</ul>
@@ -52,20 +56,31 @@
 		<?php foreach($productos as $k => $producto){?>
 		<!-- Product #1 -->
 		<div class="four shop columns">
-			<figure class="product">
-				<div class="mediaholder">
+			<figure class="product effect2">
+				<div class="mediaholder ">
 					<a href="/productos/view/<?php echo $producto['Producto']['id']; ?>">
 						<img alt="" src="/img/productos/<?php echo $producto['Producto']['foto1'];?>"/>
 						<div class="cover">
 							<img alt="" src="/img/productos/<?php echo $producto['Producto']['foto1'];?>"/>
 						</div>
 					</a>
-					<a href="/productos/view/<?php echo $producto['Producto']['id']; ?>" class="product-button">Ver Producto</a>
+					<a href="/productos/view/<?php echo $producto['Producto']['id']; ?>" class="product-button"><i class="fa fa-paper-plane"></i> Ver Producto</a>
 				</div>
 				<a href="/productos/view/<?php echo $producto['Producto']['id']; ?>">
-					<section>
-						
-						<h5><?php echo $producto['Producto']['nombre']; ?></h5>	
+					<section>						
+						<span class="product-category"><?php echo $producto['Producto']['sku']; ?></span>
+            <h5>
+							<?php 
+							echo $this->Text->truncate(
+										ucfirst(strtolower($producto['Producto']['nombre'])),
+										35,
+										array(
+												'ellipsis' => '...',
+												'exact' => false
+										)
+								);
+							?>
+            </h5>	
 					</section>
 				</a>
 			</figure>

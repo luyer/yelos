@@ -5,6 +5,9 @@
 
 	$(document).ready(function(){
 
+		
+
+		
 		// Top Bar Dropdown
 		//----------------------------------------//
 
@@ -841,6 +844,9 @@
 
 
    // ------------------ End Document ------------------ //
+		$("img").error(function(){
+        $(this).hide();
+		});
 });
 
 })(this.jQuery);

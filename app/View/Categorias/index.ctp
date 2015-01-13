@@ -2,7 +2,7 @@
 ================================================== -->
 <section class="parallax-titlebar fullwidth-element"  data-background="#000" data-opacity="0.45" data-height="160">
 
-	<img src="/images/titlebar_bg_01.jpg" alt="" />
+	<img src="/img/slider1.jpg" alt="" />
 	<div class="parallax-overlay"></div>
 
 
@@ -32,7 +32,11 @@
 
 			<ul id="categories">
 				<?php foreach($categorias as $k => $cat){?>
-				<li><a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>"><?php echo $cat['Categoria']['nombre']; ?> <span>(12)</span></a>
+				<li>
+        	<a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>"> 
+          	<i class="fa fa-caret-right"></i> <?php echo ucfirst(strtolower($cat['Categoria']['nombre'])); ?> 
+            <span>(12)</span>
+          </a>
 				</li>
 				<?php }?>
 			</ul>
@@ -54,7 +58,7 @@
 		<?php foreach($categorias as $cat){?>
 		<!-- Product #1 -->
 		<div class="four shop columns">
-			<figure class="product" style="border: solid 1px; border-color: #D8D8D8">
+			<figure class="product effect8" >
 				<div class="mediaholder">
 					<a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>">
 						<?php if(!empty($cat['Categoria']['foto'])){ ?>
@@ -73,7 +77,7 @@
 						</div>
 						
 					</a>
-					<a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>" class="product-button">Ver Categoría</a>
+					<a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>" class="product-button"><i class="fa fa-paper-plane"></i> Ver Categoría</a>
 				</div>
 
 				<a href="/categorias/view/<?php echo $cat['Categoria']['id']; ?>">

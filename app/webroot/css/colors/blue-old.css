@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------- */
-/* Blue #009bdb
+/* Blue #2db2ea
 ---------------------------------------------------------------------- */
 .top-bar-dropdown ul li a:hover,
 .skill-bar-value,
@@ -29,7 +29,7 @@ a.caption-btn:hover,
 .qtyminus:hover,
 a.calculate-shipping:hover,
 .og-close:hover,
-.tags a:hover							{ background: #009bdb; }
+.tags a:hover							{ background: #2db2ea; }
 
 
 .top-search button:hover,
@@ -62,12 +62,12 @@ a.button.gray:hover,
 .hover-icon,
 #backtotop a:hover,
 #filters a:hover,
-#filters a.selected 					{ background-color: #009bdb; }
+#filters a.selected 					{ background-color: #2db2ea; }
 
 /* luyer */
-	.top-search button { background: #009bdb; }
+	.top-search button { background: #2db2ea; }
 	.top-search button:hover { background-color: #c0c0c0; }
-	.headline { color:#009bdb; text-shadow: 0px 1px #1287b8; }
+	.headline { color:#2db2ea; text-shadow: 0px 1px #1287b8; }
 	
 	/*
 	.product{
@@ -144,12 +144,12 @@ a.button.gray:hover,
 	.product section {
 		text-align: center;
 		background-color: #f6f6f6;
-		border-top:2px solid #009bdb;
+		border-top:2px solid #2db2ea;
 	}
 	
 	.product section h5 { 
 		font-size:95%;
-		color: #009bdb;
+		color: #2db2ea;
 		/*text-shadow: 0px 1px #1287b8;*/		
 	}
 	.showbiz .mediaholder,
@@ -163,8 +163,8 @@ a.button.gray:hover,
 	}
 		
 
-	.product-button { background: rgba(0, 155, 219, 0.60); text-shadow: 0px 1px #1287b8; left:0; }
-	.product-button:hover { background: rgba(0, 155, 219, 0.75); }
+	.product-button { background: rgba(45, 178, 234, 0.60); text-shadow: 0px 1px #1287b8; left:0; }
+	.product-button:hover { background: rgba(45, 178, 234, 0.75); }
 	
 /* luyer */
 
@@ -188,11 +188,11 @@ a,
 #categories li ul li a:hover,
 table .cart-title a:hover,
 .st-val a:hover,
-.meta a:hover   						{ color: #009bdb; }
+.meta a:hover   						{ color: #2db2ea; }
 
 
 
-#jPanelMenu-menu a.current { background: #009bdb !important; }
-.current-page { background-color: #009bdb !important; }
-blockquote { border-left: 4px solid #009bdb; }
-.categories li a:hover { color: #009bdb !important; }
+#jPanelMenu-menu a.current { background: #2db2ea !important; }
+.current-page { background-color: #2db2ea !important; }
+blockquote { border-left: 4px solid #2db2ea; }
+.categories li a:hover { color: #2db2ea !important; }

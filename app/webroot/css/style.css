@@ -11,7 +11,7 @@
 @import url("base.css");				/* Default Reset, Typography, Forms, etc. */
 @import url("responsive.css");			/* Responsive Grid */
 @import url("font-awesome.css");		/* Font Awesome Icons */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800");
+/*@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800");*/
 
 
 /* ------------------------------------------------------------------- */
@@ -67,7 +67,7 @@ ul.top-bar-menu li i {
 
 #logo a img {
 	float: left;
-	height: 43px;
+	height: 65px;
 }
 
 
@@ -1835,7 +1835,7 @@ li.dropdown ul li a:hover {
 ------------------------------------- */
 .headline {
 	font-size: 20px;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	padding-right: 10px;
 	z-index: 5;
 	position: relative;
@@ -1949,7 +1949,7 @@ a.button.color:hover { background-color: #c0c0c0; }
 	overflow: hidden;
 	margin: 0 auto;
 	margin-bottom: 38px;
-	height: 160px;
+	height: 260px;
 }
 
 .parallax-titlebar img { position: absolute; }
@@ -4440,7 +4440,7 @@ a.img-caption {
 	height:25px;
 	float: right;
 	margin: -27px 0 0 -2px;
-	background: #fff;
+	background: none;
 	padding-left: 10px;
 }
 
@@ -4920,9 +4920,14 @@ ul.footer-links { margin: 0 0 15px 0; }
 	padding: 11px 13px 10px 2px;
 	text-decoration: none;
 	color: #777;
-	border-bottom: 1px solid #eee;
-	margin-top: -1px;
+	border-bottom: 1px solid #dadada;
+	border-top:1px solid #f8f8f8;
+	/*margin-top: -1px;*/
 }
+
+#categories li:first-child a { border-top: none; }
+#categories li:last-child a { border-bottom: none; }
+
 
 #categories li a:hover,
 #categories li a.active {
