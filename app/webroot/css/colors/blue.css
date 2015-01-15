@@ -65,9 +65,10 @@ a.button.gray:hover,
 #filters a.selected 					{ background-color: #009bdb; }
 
 /* luyer */
+	#wrapperLu{ /*background-color: #eee;*/ position: relative;  z-index:0;}
 	.top-search button { background: #009bdb; }
 	.top-search button:hover { background-color: #c0c0c0; }
-	.headline { color:#009bdb; text-shadow: 0px 1px #1287b8; }
+	.headline { color:#009bdb; /*text-shadow: 0px 1px #1287b8;*/ }
 	
 	/*
 	.product{
@@ -143,12 +144,13 @@ a.button.gray:hover,
 	
 	.product section {
 		text-align: center;
-		background-color: #f6f6f6;
-		border-top:2px solid #009bdb;
+		/*background-color: #f6f6f6;*/
+		background-color: #dcdcdc;				
+		border-top:6px solid #009bdb;
 	}
 	
 	.product section h5 { 
-		font-size:95%;
+		/*font-size:98%;*/
 		color: #009bdb;
 		/*text-shadow: 0px 1px #1287b8;*/		
 	}
@@ -165,6 +167,18 @@ a.button.gray:hover,
 
 	.product-button { background: rgba(0, 155, 219, 0.60); text-shadow: 0px 1px #1287b8; left:0; }
 	.product-button:hover { background: rgba(0, 155, 219, 0.75); }
+
+	#footer{ 
+		border-bottom:1px solid #3a3a3a; 
+	}
+	#footer-bottom {
+		background: #009bdb;
+		border-top:1px solid #a0e3ff;
+		color: #00638d;
+		padding: 17px 0 13px 0;
+	}
+
+
 	
 /* luyer */
 

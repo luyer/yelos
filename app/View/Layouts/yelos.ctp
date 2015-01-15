@@ -114,8 +114,7 @@
 
   <!-- Navigation
   ================================================== -->
-  <div class="container">
-    <div class="sixteen columns">
+  <div class="clearfix">
       
       <a href="#menu" class="menu-trigger"><i class="fa fa-bars"></i> Menu</a>
   
@@ -150,7 +149,7 @@
       </nav>
       
     </div>
-  </div>
+    
 </div>
 <div id="wrapperLu">
 
@@ -225,7 +224,7 @@
   
     <!-- Container -->
     <div class="container">
-      <div class="eight columns">© Copyright 2014 by <a href="#">YELOS</a>. Todos los Derechos Reservados..</div>
+      <div class="eight columns">© Copyright 2014 <a href="/">YELOS</a>. Todos los Derechos Reservados.</div>
     </div>
     <!-- Container / End -->
   
