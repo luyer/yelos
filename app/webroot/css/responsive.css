@@ -3,7 +3,10 @@
 * Modified by Vasterad
 */
 
-
+.img-responsive{
+		max-width: 100%;
+		height: auto;
+}
 /* Table of Contents
 ==================================================
     #Base (1180 Grid)

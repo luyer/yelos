@@ -1844,7 +1844,7 @@ li.dropdown ul li a:hover {
 }
 
 .line {
-	border-bottom: 1px solid #ebebeb;
+	/*border-bottom: 1px solid #ebebeb;*/
 	width: 100%;
 	float: left;
 	height: 1px;

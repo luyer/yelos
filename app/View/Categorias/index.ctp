@@ -11,8 +11,8 @@
 
 		<nav id="breadcrumbs">
 			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Catálogo</a></li>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/categorias">Promocionales</a></li>
 			</ul>
 		</nav>
 	</div>

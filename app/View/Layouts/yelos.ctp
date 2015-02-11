@@ -124,11 +124,11 @@
           <li><a href="/" class="current homepage" id="current">Inicio</a></li>
   
           <li>
-            <a href="/categorias">Catálogo</a>
+            <a href="/categorias">Promocionales</a>
             
           </li>
           <li>
-            <a href="#">Serigrafía</a>
+            <a href="/serigrafia">Serigrafía</a>
           </li>
           <li>
             <a href="#">Gran Formato</a>
@@ -266,7 +266,6 @@
   
   <!-- Style Switcher
   ================================================== -->
-  <script src="scripts/switcher.js"></script>
 
 
 </body>
